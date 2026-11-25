@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0c0c0c;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.topbar {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+    background: #111;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #d4af55;
+}
+
+.secure-label {
+    color: #b8b8b8;
+    font-size: 13px;
+}
+
+/* Main */
+
+.payment-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 55px auto;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.step-label,
+.small-label {
+    color: #d4af55;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.page-heading p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Checkout layout */
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.booking-card,
+.payment-card {
+    background: #171717;
+    border: 1px solid #303030;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.payment-card h2 {
+    font-size: 21px;
+    margin-top: 8px;
+}
+
+.ticket-icon {
+    font-size: 28px;
+}
+
+/* Booking details */
+
+.booking-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #2d2d2d;
+    font-size: 13px;
+}
+
+.booking-item strong {
+    color: #999;
+    font-weight: 500;
+}
+
+.booking-item span {
+    color: #fff;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.booking-item.total {
+    border: none;
+    margin-top: 12px;
+    padding: 18px;
+    background: #252116;
+    border-radius: 9px;
+}
+
+.booking-item.total strong,
+.booking-item.total span {
+    color: #e5bd61;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.loading {
+    color: #aaa;
+    padding: 20px 0;
+}
+
+/* Payment methods */
+
+.payment-description {
+    color: #929292;
+    font-size: 13px;
+    margin-top: 9px;
+    margin-bottom: 25px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.payment-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.payment-option:hover {
+    border-color: #c9a44c;
+    background: #28241a;
+}
+
+.payment-option:has(input:checked) {
+    border-color: #d4af55;
+    background: #292416;
+}
+
+.payment-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-radio {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.payment-option input:checked + .custom-radio {
+    border-color: #d4af55;
+    background: #d4af55;
+    box-shadow: inset 0 0 0 3px #292416;
+}
+
+.payment-logo {
+    width: 43px;
+    height: 43px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.esewa-logo {
+    background: #36b85a;
+    color: white;
+}
+
+.khalti-logo {
+    background: #6335b8;
+    color: white;
+}
+
+.payment-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-text strong {
+    font-size: 14px;
+}
+
+.payment-text small {
+    color: #999;
+    font-size: 11px;
+}
+
+.payment-arrow {
+    margin-left: auto;
+    font-size: 25px;
+    color: #888;
+}
+
+/* Security */
+
+.security-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    margin-top: 12px;
+}
+
+.security-note p {
+    color: #999;
+    font-size: 11px;
+}
+
+/* Button */
+
+#pay-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #e5c36c, #bd9136);
+    color: #111;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#pay-button span {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+#pay-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 22px rgba(212, 175, 85, 0.2);
+}
+
+#pay-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.terms-text {
+    color: #777;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 16px;
+}
+
+/* Navigation */
+
+.back-link {
+    display: inline-block;
+    color: #d4af55;
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    border-top: 1px solid #242424;
+    font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-container {
+        margin: 35px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+    .booking-card,
+    .payment-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 450px) {
+    .topbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .secure-label {
+        font-size: 11px;
+    }
+
+    .booking-item {
+        font-size: 12px;
+    }
+}

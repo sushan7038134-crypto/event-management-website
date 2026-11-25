@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTHUB | Seat Selection</title>
+    <link rel="stylesheet" href="seatselect.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">EVENT<span>HUB</span></a>
+
+        <div class="nav-links">
+            <a href="#">Explore Events</a>
+            <a href="#">My Bookings</a>
+            <a href="#">Help</a>
+        </div>
+
+        <button class="login-btn">Login</button>
+    </nav>
+
+    <!-- EVENT INFORMATION -->
+    <section class="event-header">
+
+        <div class="event-info">
+            <span class="category" id="event-category">EVENT BOOKING</span>
+
+            <h1 id="event-name">Loading event...</h1>
+
+            <p id="event-description">
+                Choose your perfect spot and enjoy the experience.
+            </p>
+
+            <div class="event-details">
+                <span id="event-date">📅 Loading date...</span>
+                <span id="event-time">🕕 Loading time...</span>
+                <span id="event-location">📍 Loading venue...</span>
+            </div>
+        </div>
+
+        <div class="event-switch">
+            <span id="event-type-label">EVENT TICKETS</span>
+        </div>
+
+    </section>
+
+    <!-- EVENT POSTER -->
+    <section id="event-poster-container"
+        style="display:none; margin:20px 0; text-align:center;">
+
+        <img id="event-poster"
+            src=""
+            alt="Event poster"
+            style="
+                width:100%;
+                max-height:320px;
+                object-fit:cover;
+                border-radius:18px;
+                display:block;
+            ">
+    </section>
+
+    <!-- MAIN BOOKING AREA -->
+    <main class="booking-layout">
+
+        <!-- SEAT MAP -->
+        <section class="seat-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="small-label">VENUE MAP</span>
+                    <h2>Select Your Block</h2>
+                </div>
+
+                <span class="live-status">● LIVE SELECTION</span>
+            </div>
+
+            <!-- STAGE / FIELD -->
+            <div class="venue">
+                <div class="venue-glow"></div>
+                <span id="venue-icon">♫</span>
+                <h2 id="venue-title">EVENT AREA</h2>
+                <p id="venue-subtitle">YOUR EVENT EXPERIENCE</p>
+            </div>
+
+            <!-- BLOCKS -->
+            <div class="blocks-heading">
+                <h3>Choose a seating category</h3>
+                <p>Select a block to view individual seats</p>
+            </div>
+
+            <div class="blocks">
+
+                <button class="seat-block vip" data-block="VIP">
+                    <span class="block-tag">EXCLUSIVE</span>
+                    <h3>VIP</h3>
+                    <p>Premium front-row experience</p>
+                    <strong id="vip-price">Rs. 0</strong>
+                    <span class="block-action">Select Block →</span>
+                </button>
+
+                <button class="seat-block premium" data-block="Premium">
+                    <span class="block-tag">POPULAR</span>
+                    <h3>PREMIUM</h3>
+                    <p>Excellent central view</p>
+                    <strong id="premium-price">Rs. 0</strong>
+                    <span class="block-action">Select Block →</span>
+                </button>
+
+                <button class="seat-block regular" data-block="Regular">
+                    <span class="block-tag">STANDARD</span>
+                    <h3>REGULAR</h3>
+                    <p>Enjoy the event with friends</p>
+                    <strong id="regular-price">Rs. 0</strong>
+                    <span class="block-action">Select Block →</span>
+                </button>
+
+            </div>
+
+            <!-- INDIVIDUAL SEATS -->
+            <div class="individual-section" id="individual-section">
+
+                <div class="individual-heading">
+                    <div>
+                        <span class="small-label">YOUR SEATING AREA</span>
+                        <h2 id="selected-block-name">Select a block</h2>
+                    </div>
+
+                    <span id="seat-count">Choose your seats</span>
+                </div>
+
+                <div class="seat-legend">
+                    <span><i class="available-dot"></i> Available</span>
+                    <span><i class="selected-dot"></i> Selected</span>
+                    <span><i class="booked-dot"></i> Booked</span>
+                </div>
+
+                <div class="seat-grid" id="seat-grid"></div>
+
+                <p class="seat-note">
+                    Select up to 6 seats. Click a selected seat again to remove it.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- BOOKING SUMMARY -->
+        <aside class="summary-panel">
+
+            <span class="small-label">YOUR ORDER</span>
+            <h2>Booking Summary</h2>
+
+            <div class="summary-event">
+                <div class="summary-icon" id="summary-icon">♫</div>
+                <div>
+                    <h3 id="summary-event-name">Your Event</h3>
+                    <p id="summary-event-date">Event date</p>
+                </div>
+            </div>
+
+            <div class="summary-line">
+                <span>Selected Block</span>
+                <strong id="summary-block">None</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Selected Seats</span>
+                <strong id="summary-seats">None</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Ticket Quantity</span>
+                <strong id="summary-quantity">0</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Price per Ticket</span>
+                <strong id="summary-price">Rs. 0</strong>
+            </div>
+
+            <div class="summary-total">
+                <span>Total Amount</span>
+                <strong id="total-price">Rs. 0</strong>
+            </div>
+
+            <button class="continue-btn" id="continue-btn" disabled>
+                Continue to Payment →
+            </button>
+
+            <p class="secure-note">🔒 Secure booking experience</p>
+
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 EVENTHUB. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+</div>
+
+<script src="seat-selectionjs.js"></script>
+
+</body>
+</html>

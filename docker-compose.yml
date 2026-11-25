@@ -1,0 +1,18 @@
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: eventora-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: eventora_root123
+      MYSQL_DATABASE: eventora
+      MYSQL_USER: eventora_user
+      MYSQL_PASSWORD: eventora_pass123
+    ports:
+      - "3307:3306"
+    volumes:
+      - eventora_data:/var/lib/mysql
+
+volumes:
+  eventora_data:

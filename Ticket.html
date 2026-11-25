@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTHUB | Your Ticket</title>
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <a href="user.html" class="logo">EVENT<span>HUB</span></a>
+        <span class="secure-label">YOUR EVENT TICKET</span>
+    </header>
+
+    <main class="ticket-page">
+        <div class="success-heading">
+            <div class="success-icon">✓</div>
+            <span class="eyebrow">BOOKING CONFIRMED</span>
+            <h1>Your Ticket Is Ready!</h1>
+            <p>Your EVENTHUB demo ticket has been generated successfully.</p>
+            <span class="demo-label">DEMO PAYMENT — NOT A REAL PAYMENT</span>
+        </div>
+
+        <section class="ticket-card" id="ticket-card">
+            <div class="ticket-top">
+                <div>
+                    <span class="ticket-brand">EVENT<span>HUB</span></span>
+                    <p class="ticket-subtitle">OFFICIAL EVENT TICKET</p>
+                </div>
+                <span class="ticket-status">DEMO PAID</span>
+            </div>
+
+            <div class="ticket-event">
+                <img id="ticket-image" src="" alt="Event poster">
+                <div class="event-information">
+                    <span id="ticket-category" class="event-category">EVENT</span>
+                    <h2 id="ticket-event-name">Event Name</h2>
+                    <p id="ticket-date"></p>
+                    <p id="ticket-time"></p>
+                    <p id="ticket-venue"></p>
+                </div>
+            </div>
+
+            <div class="ticket-divider"></div>
+
+            <div class="ticket-details">
+                <div>
+                    <span>BOOKING ID</span>
+                    <strong id="ticket-booking-id"></strong>
+                </div>
+                <div>
+                    <span>TICKET BLOCK</span>
+                    <strong id="ticket-block"></strong>
+                </div>
+                <div>
+                    <span>SEATS</span>
+                    <strong id="ticket-seats"></strong>
+                </div>
+                <div>
+                    <span>QUANTITY</span>
+                    <strong id="ticket-quantity"></strong>
+                </div>
+                <div>
+                    <span>PAYMENT METHOD</span>
+                    <strong id="ticket-payment"></strong>
+                </div>
+                <div>
+                    <span>PAYMENT STATUS</span>
+                    <strong class="paid-status">Demo Paid</strong>
+                </div>
+            </div>
+
+            <div class="ticket-total">
+                <span>TOTAL AMOUNT</span>
+                <strong id="ticket-total"></strong>
+            </div>
+
+            <div class="qr-section">
+                <img id="ticket-qr" alt="Ticket QR code">
+                <p>Scan this QR code to view your booking ID.</p>
+            </div>
+
+            <p class="ticket-warning">This ticket is generated for project demonstration only. It is not valid for real event entry.</p>
+        </section>
+
+        <div class="ticket-actions">
+            <button id="print-ticket" type="button">Print Ticket</button>
+            <a href="user.html">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <script src="ticket.js"></script>
+</body>
+</html>

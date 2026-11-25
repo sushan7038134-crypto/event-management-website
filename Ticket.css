@@ -1,0 +1,369 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #090909;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.topbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+    background: #101010;
+}
+
+.logo,
+.ticket-brand {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span,
+.ticket-brand span {
+    color: #e9ad42;
+}
+
+.secure-label {
+    color: #d5ad68;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ticket-page {
+    width: min(680px, 92%);
+    margin: 55px auto;
+}
+
+.success-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #183c2b;
+    color: #65dc98;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.eyebrow {
+    color: #e9ad42;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.success-heading h1 {
+    margin: 10px 0;
+    font-size: clamp(25px, 5vw, 35px);
+}
+
+.success-heading p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.demo-label {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 12px;
+    border: 1px solid #765a2d;
+    border-radius: 5px;
+    color: #e9ad42;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ticket-card {
+    padding: 30px;
+    border: 1px solid #3b3020;
+    border-radius: 14px;
+    background: #151515;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+}
+
+.ticket-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.ticket-brand {
+    font-size: 22px;
+}
+
+.ticket-subtitle {
+    margin-top: 5px;
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.ticket-status {
+    padding: 8px 11px;
+    border-radius: 5px;
+    background: #183c2b;
+    color: #65dc98;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.ticket-event {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-event img {
+    width: 125px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #252525;
+}
+
+.event-information {
+    min-width: 0;
+}
+
+.event-category {
+    color: #e9ad42;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.event-information h2 {
+    margin: 8px 0 12px;
+    font-size: 22px;
+    overflow-wrap: anywhere;
+}
+
+.event-information p {
+    margin-top: 7px;
+    color: #bbb;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ticket-divider {
+    margin: 27px 0;
+    border-top: 1px dashed #555;
+}
+
+.ticket-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 23px 15px;
+}
+
+.ticket-details div {
+    min-width: 0;
+}
+
+.ticket-details span,
+.ticket-total span {
+    display: block;
+    margin-bottom: 7px;
+    color: #888;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ticket-details strong {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.ticket-details .paid-status {
+    color: #65dc98;
+}
+
+.ticket-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 28px;
+    padding: 19px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.ticket-total span {
+    margin: 0;
+}
+
+.ticket-total strong {
+    color: #e9ad42;
+    font-size: 22px;
+}
+
+.qr-section {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.qr-section img {
+    width: 130px;
+    height: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.qr-section p {
+    margin-top: 9px;
+    color: #999;
+    font-size: 11px;
+}
+
+.ticket-warning {
+    margin-top: 23px;
+    color: #d1a85f;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.ticket-actions button,
+.ticket-actions a {
+    min-height: 45px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e9ad42;
+    border-radius: 6px;
+    background: #e9ad42;
+    color: #111;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ticket-actions a {
+    background: transparent;
+    color: #e9ad42;
+}
+
+@media (max-width: 520px) {
+    .topbar {
+        padding: 0 5%;
+    }
+
+    .ticket-page {
+        margin: 35px auto;
+    }
+
+    .ticket-card {
+        padding: 20px;
+    }
+
+    .ticket-event {
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .ticket-event img {
+        width: 95px;
+        height: 120px;
+    }
+
+    .event-information h2 {
+        font-size: 17px;
+    }
+
+    .ticket-details {
+        gap: 20px 10px;
+    }
+
+    .ticket-actions {
+        flex-direction: column;
+    }
+
+    .ticket-actions button,
+    .ticket-actions a {
+        width: 100%;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+        color: #111;
+    }
+
+    .topbar,
+    .success-heading,
+    .ticket-actions {
+        display: none !important;
+    }
+
+    .ticket-page {
+        width: 100%;
+        margin: 0;
+    }
+
+    .ticket-card {
+        border: 1px solid #aaa;
+        background: #fff;
+        color: #111;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .ticket-details strong,
+    .event-information h2 {
+        color: #111;
+    }
+
+    .event-information p,
+    .ticket-subtitle,
+    .ticket-details span,
+    .ticket-total span,
+    .qr-section p {
+        color: #555;
+    }
+
+    .ticket-warning {
+        color: #8a5b12;
+    }
+}

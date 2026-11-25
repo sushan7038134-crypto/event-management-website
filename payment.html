@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTHUB | Secure Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="user.html" class="logo">EVENT<span>HUB</span></a>
+        <div class="secure-label">🔒 Secure Checkout</div>
+    </header>
+
+    <main class="payment-container">
+
+        <div class="page-heading">
+            <span class="step-label">FINAL STEP</span>
+            <h1>Complete Your Booking</h1>
+            <p>You're one step away from experiencing something amazing.</p>
+        </div>
+
+        <div class="checkout-layout">
+
+            <section class="booking-card">
+                <div class="section-heading">
+                    <div>
+                        <span class="small-label">YOUR ORDER</span>
+                        <h2>Booking Summary</h2>
+                    </div>
+                    <span class="ticket-icon">🎟️</span>
+                </div>
+
+                <div id="booking-info">
+                    <p class="loading">Loading your booking...</p>
+                </div>
+            </section>
+
+            <section class="payment-card">
+                <span class="small-label">PAYMENT</span>
+                <h2>Choose Payment Method</h2>
+                <p class="payment-description">Select your preferred digital wallet.</p>
+
+                <div class="payment-options">
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="esewa">
+                        <span class="custom-radio"></span>
+                        <span class="payment-logo esewa-logo">e</span>
+                        <span class="payment-text">
+                            <strong>eSewa</strong>
+                            <small>Pay securely with eSewa</small>
+                        </span>
+                        <span class="payment-arrow">›</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="khalti">
+                        <span class="custom-radio"></span>
+                        <span class="payment-logo khalti-logo">K</span>
+                        <span class="payment-text">
+                            <strong>Khalti</strong>
+                            <small>Pay securely with Khalti</small>
+                        </span>
+                        <span class="payment-arrow">›</span>
+                    </label>
+
+                </div>
+
+                <div class="security-note">
+                    <span>🔐</span>
+                    <p>Your payment information is handled securely.</p>
+                </div>
+
+                <button id="pay-button" disabled>
+                    Continue to Payment <span>→</span>
+                </button>
+
+                <p class="terms-text">
+                    By continuing, you agree to our terms and conditions.
+                </p>
+            </section>
+
+        </div>
+
+        <a href="user.html" class="back-link">← Back to Events</a>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EVENTHUB. All rights reserved.</p>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>

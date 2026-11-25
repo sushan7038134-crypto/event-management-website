@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉVÉNTHUB | Organizer Dashboard</title>
+    <link rel="stylesheet" href="organizer.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>ÉVÉNTHUB</h2>
+
+        <button class="menu active" data-page="overview">Overview</button>
+        <button class="menu" data-page="create-event">Create Event</button>
+        <button class="menu" data-page="my-events">My Events</button>
+        <button class="menu" data-page="bookings">Bookings</button>
+        <button class="menu" data-page="analytics">Analytics</button>
+        <button class="menu logout" id="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main">
+
+        <section class="page" id="overview">
+            <h1>Organizer Dashboard</h1>
+
+            <div class="stats">
+                <div class="stat">
+                    <p>Total Events</p>
+                    <h3 id="total-events">0</h3>
+                </div>
+
+                <div class="stat">
+                    <p>Upcoming Events</p>
+                    <h3 id="upcoming-events">0</h3>
+                </div>
+
+                <div class="stat">
+                    <p>Total Available Seats</p>
+                    <h3 id="total-seats">0</h3>
+                </div>
+            </div>
+
+            <p class="note">Manage your events and keep track of your event information from one place.</p>
+        </section>
+
+        <section class="page hidden" id="create-event">
+            <h1>Create New Event</h1>
+
+            <form id="event-form">
+                <label for="title">Event Title</label>
+                <input type="text" id="title" placeholder="Enter event title" required>
+
+                <label for="category">Event Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="Music">Music</option>
+                    <option value="Concert">Concert</option>
+                    <option value="Festival">Festival</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="performers">Performers</label>
+                <input type="text" id="performers" placeholder="Enter performer or artist name">
+
+                <div class="two">
+                    <div>
+                        <label for="date">Event Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div>
+                        <label for="time">Event Time</label>
+                        <input type="time" id="time" required>
+                    </div>
+                </div>
+
+                <label for="venue">Venue</label>
+                <input type="text" id="venue" placeholder="Enter event venue" required>
+
+                <div class="two">
+                    <div>
+                        <label for="price">Ticket Price</label>
+                        <input type="number" id="price" min="0" placeholder="Enter price" required>
+                    </div>
+
+                    <div>
+                        <label for="seats">Available Seats</label>
+                        <input type="number" id="seats" min="1" placeholder="Enter seat capacity" required>
+                    </div>
+                </div>
+
+                <label for="description">Event Description</label>
+                <textarea id="description" placeholder="Describe your event" required></textarea>
+
+                <label for="image">Event Image</label>
+                <input type="file" id="image" accept="image/*">
+
+                <img src="" alt="Event image preview" id="preview" class="hidden">
+
+                <p id="error" role="alert"></p>
+
+                <button type="submit" class="btn">Add Event</button>
+            </form>
+        </section>
+
+        <section class="page hidden" id="my-events">
+            <h1>My Events</h1>
+            <div id="event-list"></div>
+        </section>
+
+        <section class="page hidden" id="bookings">
+            <h1>Bookings</h1>
+            <p class="note">Booking management will be available when the ticket booking feature is connected.</p>
+        </section>
+
+        <section class="page hidden" id="analytics">
+            <h1>Analytics</h1>
+            <p class="note">Event analytics will be available when booking data is connected.</p>
+        </section>
+
+    </main>
+
+    <script src="organizer.js"></script>
+</body>
+</html>
